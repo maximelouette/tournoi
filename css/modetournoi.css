@@ -1,0 +1,69 @@
+  body{
+  background-repeat:no-repeat;
+	background-color:blue;
+  }
+  .transparent {
+	/* Required for IE 5, 6, 7 */
+	/* ...or something to trigger hasLayout, like zoom: 1; */
+	width: 100%; 
+		
+	/* Theoretically for IE 8 & 9 (more valid) */	
+	/* ...but not required as filter works too */
+	/* should come BEFORE filter */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	
+	/* This works in IE 8 & 9 too */
+	/* ... but also 5, 6, 7 */
+	filter: alpha(opacity=50);
+	
+	/* Older than Firefox 0.9 */
+	-moz-opacity:0.5;
+	
+	/* Safari 1.x (pre WebKit!) */
+	-khtml-opacity: 0.5;
+    
+	/* Modern!
+	/* Firefox 0.9+, Safari 2?, Chrome any?
+	/* Opera 9+, IE 9+ */
+	opacity: 0.5;
+	}
+
+  #draggable { width: 150px; height: 150px; background-color:blue;}
+	/*
+	div {
+	background-color:blue;
+	}
+	*/
+	.imgPictureLittle
+	{
+		position: relative;
+		top: 0;
+		left: 0;
+		width:30px;
+		vertical-align: middle;
+		}
+	.imgback
+	{
+		position: relative;
+		top: 0;
+		left: 0;
+		width:60px;
+		vertical-align: middle;
+		}
+	.imgtop
+	{  
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width:60px;
+		vertical-align: middle;
+		opacity: 0.75;
+	}
+	span { 
+	float: left;
+	width: 0px;
+	position: relative;
+	vertical-align:middle;
+	}
+  
+  

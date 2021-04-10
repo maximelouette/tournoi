@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suivi pour tournoi </title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/modetournoi.css">
+	<script src="scripts/libs/jquery-1.12.4.js"></script>
+	<script src="scripts/libs/jquery-ui.js"></script>
+	<script src="scripts/modetournoi.js"></script>
+</head>
+<body>
+
+<div id="draggable-command" class="ui-widget-content" style="width:1000px">
+	<div class="widget">
+		<input type="checkbox" name="checkbox-fix-command-panel" id="checkbox-fix-command-panel">
+		<label for="checkbox-fix-command-panel">Bloquer la position de la zone de controle</label></br>
+	</div>
+
+	<div class="widget">
+	<input id="clean-top" type="button" value="clean-top" /> 
+	</br>
+	<div  id="draggable-top" >
+		<span id="image-chaman-top">
+			<img id="image-chaman-top-class" src="" class="imgback" />
+			<img id="image-chaman-top-status" src="" class="imgtop" />
+		</span>
+		<span id="image-mage-top">
+			<img id="image-mage-top-class" src="" class="imgback"/>
+			<img id="image-mage-top-status" src="" class="imgtop"/>
+		</span> 
+		<span id="image-voleur-top">
+			<img id="image-voleur-top-class" src="" class="imgback"/>
+			<img id="image-voleur-top-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-guerrier-top">
+			<img id="image-guerrier-top-class" src="" class="imgback"/>
+			<img id="image-guerrier-top-status" src="" class="imgtop" />
+		</span>
+		<span id="image-demoniste-top">
+			<img id="image-demoniste-top-class" src="" class="imgback"/>
+			<img id="image-demoniste-top-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-pretre-top">
+			<img id="image-pretre-top-class" src="" class="imgback"/>
+			<img id="image-pretre-top-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-chasseur-top">
+			<img id="image-chasseur-top-class" src="" class="imgback"/>
+			<img id="image-chasseur-top-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-druide-top">
+			<img  id="image-druide-top-class" src="" class="imgback"/>
+			<img  id="image-druide-top-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-paladin-top">
+			<img  id="image-paladin-top-class" src="" class="imgback"/>
+			<img id="image-paladin-top-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-demonhunter-top">
+			<img  id="image-demonhunter-top-class" src="" class="imgback"/>
+			<img id="image-demonhunter-top-status" src="" class="imgtop"/>
+		</span>
+
+	</div>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	<div class="widget">
+	<input id="clean-bot" type="button" value="clean-bot"/> 
+	</br>
+	<div  id="draggable-bot">
+		<span id="image-chaman-bot" >
+			<img id="image-chaman-bot-class" src="" class="imgback"/>
+			<img id="image-chaman-bot-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-mage-bot">
+			<img id="image-mage-bot-class" src="" class="imgback"/>
+			<img id="image-mage-bot-status" src="" class="imgtop"/>
+		</span> 
+		<span id="image-voleur-bot">
+			<img id="image-voleur-bot-class" src="" class="imgback"/>
+			<img id="image-voleur-bot-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-guerrier-bot">
+			<img id="image-guerrier-bot-class" src="" class="imgback"/>
+			<img id="image-guerrier-bot-status" src="" class="imgtop" />
+		</span>
+		<span id="image-demoniste-bot">
+			<img id="image-demoniste-bot-class" src="" class="imgback"/>
+			<img id="image-demoniste-bot-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-pretre-bot">
+			<img id="image-pretre-bot-class" src="" class="imgback"/>
+			<img id="image-pretre-bot-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-chasseur-bot">
+			<img id="image-chasseur-bot-class" src="" class="imgback"/>
+			<img id="image-chasseur-bot-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-druide-bot">
+			<img  id="image-druide-bot-class" src="" class="imgback"/>
+			<img  id="image-druide-bot-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-paladin-bot">
+			<img  id="image-paladin-bot-class" src="" class="imgback"/>
+			<img id="image-paladin-bot-status" src="" class="imgtop"/>
+		</span>
+		<span id="image-demonhunter-bot">
+			<img  id="image-demonhunter-bot-class" src="" class="imgback"/>
+			<img id="image-demonhunter-bot-status" src="" class="imgtop"/>
+		</span>
+	</div>
+	</div>
+	</br>
+	</br>
+	</br>
+	</br>
+	<p>
+	<TABLE width="1000px" heigth="1000px">
+		<TR>
+			<TD width="150px">
+			Classes Top player
+			</TD>
+			<TD width="350px">
+			Statut Classe Top Player
+			</TD>
+			<TD width="150px">
+			Classes Bottom Player
+			</TD>
+			<TD width="350px">
+			Statut Classe Bottom Player
+			</TD>
+		</TR>
+			<TR >
+			<TD style="vertical-align: top;">
+			<fieldset >
+				<input type="checkbox" name="checkbox-played-chaman-top" id="checkbox-played-chaman-top">
+				<label for="checkbox-played-chaman-top">Chaman</label></br>
+				<input type="checkbox" name="checkbox-played-mage-top" id="checkbox-played-mage-top">
+				<label for="checkbox-played-mage-top">Mage</label></br>
+				<input type="checkbox" name="checkbox-played-voleur-top" id="checkbox-played-voleur-top">
+				<label for="checkbox-played-voleur-top">Voleur</label></br>
+				<input type="checkbox" name="checkbox-played-guerrier-top" id="checkbox-played-guerrier-top">
+				<label for="checkbox-played-guerrier-top">Guerrier</label></br>
+				<input type="checkbox" name="checkbox-played-demoniste-top" id="checkbox-played-demoniste-top">
+				<label for="checkbox-played-demoniste-top">Demoniste</label></br>
+				<input type="checkbox" name="checkbox-played-pretre-top" id="checkbox-played-pretre-top">
+				<label for="checkbox-played-pretre-top">Pretre</label></br>
+				<input type="checkbox" name="checkbox-played-chasseur-top" id="checkbox-played-chasseur-top">
+				<label for="checkbox-played-chasseur-top">Chasseur</label></br>
+				<input type="checkbox" name="checkbox-played-druide-top" id="checkbox-played-druide-top">
+				<label for="checkbox-played-druide-top">Druide</label></br>
+				<input type="checkbox" name="checkbox-played-paladin-top" id="checkbox-played-paladin-top">
+				<label for="checkbox-played-paladin-top">Paladin</label></br>
+				<input type="checkbox" name="checkbox-played-demonhunter-top" id="checkbox-played-demonhunter-top">
+				<label for="checkbox-played-demonhunter-top">DH</label></br>
+			</fieldset>
+			</TD>
+			<TD style="vertical-align: top;">
+				<fieldset id="radio-status-chaman-top" >
+					<img src="classes/shaman.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-chaman-top" id="checkbox-vide-chaman-top">
+					<label for="status-chaman-top-vide">vide</label>					
+					<input type="radio" name="status-chaman-top" id="checkbox-ban-chaman-top">
+					<label for="status-chaman-top-ban">ban</label>					
+					<input type="radio" name="status-chaman-top" id="checkbox-win-chaman-top">
+					<label for="status-chaman-top-win">win</label>					
+					<input type="radio" name="status-chaman-top" id="checkbox-loose-chaman-top">
+					<label for="status-chaman-top-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-mage-top" >
+					<img src="classes/mage.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-mage-top" id="checkbox-vide-mage-top">
+					<label for="status-mage-top-vide">vide</label>
+					
+					<input type="radio" name="status-mage-top" id="checkbox-ban-mage-top">
+					<label for="status-mage-top-ban">ban</label>
+					
+					<input type="radio" name="status-mage-top" id="checkbox-win-mage-top">
+					<label for="status-mage-top-win">win</label>
+					
+					<input type="radio" name="status-mage-top" id="checkbox-loose-mage-top">
+					<label for="status-mage-top-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-voleur-top">
+					<img src="classes/rogue.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-voleur-top" id="checkbox-vide-voleur-top">
+					<label for="status-voleur-top-vide">vide</label>
+					
+					<input type="radio" name="status-voleur-top" id="checkbox-ban-voleur-top">
+					<label for="status-voleur-top-ban">ban</label>
+					
+					<input type="radio" name="status-voleur-top" id="checkbox-win-voleur-top">
+					<label for="status-voleur-top-win">win</label>
+					
+					<input type="radio" name="status-voleur-top" id="checkbox-loose-voleur-top">
+					<label for="status-voleur-top-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-guerrier-top">
+					<img src="classes/warrior.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-guerrier-top" id="checkbox-vide-guerrier-top">
+					<label for="status-guerrier-top-vide">vide</label>
+					
+					<input type="radio" name="status-guerrier-top" id="checkbox-ban-guerrier-top">
+					<label for="status-guerrier-top-ban">ban</label>
+					
+					<input type="radio" name="status-guerrier-top" id="checkbox-win-guerrier-top">
+					<label for="status-guerrier-top-win">win</label>
+					
+					<input type="radio" name="status-guerrier-top" id="checkbox-loose-guerrier-top">
+					<label for="status-guerrier-top-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-demoniste-top">
+					<img src="classes/warlock.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-demoniste-top" id="checkbox-vide-demoniste-top">
+					<label for="status-demoniste-top-vide">vide</label>
+					
+					<input type="radio" name="status-demoniste-top" id="checkbox-ban-demoniste-top">
+					<label for="status-demoniste-top-ban">ban</label>
+					
+					<input type="radio" name="status-demoniste-top" id="checkbox-win-demoniste-top">
+					<label for="status-demoniste-top-win">win</label>
+					
+					<input type="radio" name="status-demoniste-top" id="checkbox-loose-demoniste-top">
+					<label for="status-demoniste-top-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-pretre-top">
+					<img src="classes/priest.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-pretre-top" id="checkbox-vide-pretre-top">
+					<label for="status-pretre-top-vide">vide</label>
+					
+					<input type="radio" name="status-pretre-top" id="checkbox-ban-pretre-top">
+					<label for="status-pretre-top-ban">ban</label>
+					
+					<input type="radio" name="status-pretre-top" id="checkbox-win-pretre-top">
+					<label for="status-pretre-top-win">win</label>
+					
+					<input type="radio" name="status-pretre-top" id="checkbox-loose-pretre-top">
+					<label for="status-pretre-top-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-chasseur-top">
+					<img src="classes/hunter.png" class="imgPictureLittle">
+					
+					<input type="radio" name="status-chasseur-top" id="checkbox-vide-chasseur-top">
+					<label for="status-chasseur-top-vide">vide</label>
+					
+					<input type="radio" name="status-chasseur-top" id="checkbox-ban-chasseur-top">
+					<label for="status-chasseur-top-ban">ban</label>
+					
+					<input type="radio" name="status-chasseur-top" id="checkbox-win-chasseur-top">
+					<label for="status-chasseur-top-win">win</label>
+					
+					<input type="radio" name="status-chasseur-top" id="checkbox-loose-chasseur-top">
+					<label for="status-chasseur-top-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-druide-top">
+					<img src="classes/druid.png"   class="imgPictureLittle">
+					
+					<input type="radio" name="status-druide-top" id="checkbox-vide-druide-top">
+					<label for="status-druide-top-vide">vide</label>
+					
+					<input type="radio" name="status-druide-top" id="checkbox-ban-druide-top">
+					<label for="status-druide-top-ban">ban</label>
+					
+					<input type="radio" name="status-druide-top" id="checkbox-win-druide-top">
+					<label for="status-druide-top-win">win</label>
+					
+					<input type="radio" name="status-druide-top" id="checkbox-loose-druide-top">
+					<label for="status-druide-top-loose">lose</label>
+				</fieldset>	
+				<fieldset id="radio-status-paladin-top">
+					<img src="classes/paladin.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-paladin-top" id="checkbox-vide-paladin-top">
+					<label for="status-paladin-top-vide">vide</label>
+					
+					<input type="radio" name="status-paladin-top" id="checkbox-ban-paladin-top">
+					<label for="status-paladin-top-ban">ban</label>
+					
+					<input type="radio" name="status-paladin-top" id="checkbox-win-paladin-top">
+					<label for="status-paladin-top-win">win</label>
+					
+					<input type="radio" name="status-paladin-top" id="checkbox-loose-paladin-top">
+					<label for="status-paladin-top-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-demonhunter-top">
+					<img src="classes/demonhunter.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-demonhunter-top" id="checkbox-vide-demonhunter-top">
+					<label for="status-demonhunter-top-vide">vide</label>
+					
+					<input type="radio" name="status-demonhunter-top" id="checkbox-ban-demonhunter-top">
+					<label for="status-demonhunter-top-ban">ban</label>
+					
+					<input type="radio" name="status-demonhunter-top" id="checkbox-win-demonhunter-top">
+					<label for="status-demonhunter-top-win">win</label>
+					
+					<input type="radio" name="status-demonhunter-top" id="checkbox-loose-demonhunter-top">
+					<label for="status-demonhunter-top-loose">lose</label>
+				</fieldset>
+			</TD>
+			<TD style="vertical-align: top;">
+			<fieldset style="vertical-align: top;">
+				<input type="checkbox" name="checkbox-played-chaman-bot" id="checkbox-played-chaman-bot">
+				<label for="checkbox-played-chaman-bot">Chaman</label></br>
+				<input type="checkbox" name="checkbox-played-mage-bot" id="checkbox-played-mage-bot">
+				<label for="checkbox-played-mage-bot">Mage</label></br>
+				<input type="checkbox" name="checkbox-played-voleur-bot" id="checkbox-played-voleur-bot">
+				<label for="checkbox-played-voleur-bot">Voleur</label></br>
+				<input type="checkbox" name="checkbox-played-guerrier-bot" id="checkbox-played-guerrier-bot">
+				<label for="checkbox-played-guerrier-bot">Guerrier</label></br>
+				<input type="checkbox" name="checkbox-played-demoniste-bot" id="checkbox-played-demoniste-bot">
+				<label for="checkbox-played-demoniste-bot">Demoniste</label></br>
+				<input type="checkbox" name="checkbox-played-pretre-bot" id="checkbox-played-pretre-bot">
+				<label for="checkbox-played-pretre-bot">Pretre</label></br>
+				<input type="checkbox" name="checkbox-played-chasseur-bot" id="checkbox-played-chasseur-bot">
+				<label for="checkbox-played-chasseur-bot">Chasseur</label></br>
+				<input type="checkbox" name="checkbox-played-druide-bot" id="checkbox-played-druide-bot">
+				<label for="checkbox-played-druide-bot">Druide</label></br>
+				<input type="checkbox" name="checkbox-played-paladin-bot" id="checkbox-played-paladin-bot">
+				<label for="checkbox-played-paladin-bot">Paladin</label></br>
+				<input type="checkbox" name="checkbox-played-demonhunter-bot" id="checkbox-played-demonhunter-bot">
+				<label for="checkbox-played-demonhunter-bot">DH</label></br>
+			</fieldset>
+			</TD>
+			<TD style="vertical-align: top;">
+				<fieldset id="radio-status-chaman-bot">
+					<img src="classes/shaman.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-chaman-bot" id="checkbox-vide-chaman-bot">
+					<label for="status-chaman-bot-vide">vide</label>
+					
+					<input type="radio" name="status-chaman-bot" id="checkbox-ban-chaman-bot">
+					<label for="status-chaman-bot-ban">ban</label>
+					
+					<input type="radio" name="status-chaman-bot" id="checkbox-win-chaman-bot">
+					<label for="status-chaman-bot-win">win</label>
+					
+					<input type="radio" name="status-chaman-bot" id="checkbox-loose-chaman-bot">
+					<label for="status-chaman-bot-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-mage-bot">
+					<img src="classes/mage.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-mage-bot" id="checkbox-vide-mage-bot">
+					<label for="status-mage-bot-vide">vide</label>
+					
+					<input type="radio" name="status-mage-bot" id="checkbox-ban-mage-bot">
+					<label for="status-mage-bot-ban">ban</label>
+					
+					<input type="radio" name="status-mage-bot" id="checkbox-win-mage-bot">
+					<label for="status-mage-bot-win">win</label>
+					
+					<input type="radio" name="status-mage-bot" id="checkbox-loose-mage-bot">
+					<label for="status-mage-bot-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-voleur-bot">
+					<img src="classes/rogue.png"   class="imgPictureLittle">
+					
+					<input type="radio" name="status-voleur-bot" id="checkbox-vide-voleur-bot">
+					<label for="status-voleur-bot-vide">vide</label>
+					
+					<input type="radio" name="status-voleur-bot" id="checkbox-ban-voleur-bot">
+					<label for="status-voleur-bot-ban">ban</label>
+					
+					<input type="radio" name="status-voleur-bot" id="checkbox-win-voleur-bot">
+					<label for="status-voleur-bot-win">win</label>
+					
+					<input type="radio" name="status-voleur-bot" id="checkbox-loose-voleur-bot">
+					<label for="status-voleur-bot-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-guerrier-bot">
+					<img src="classes/warrior.png"   class="imgPictureLittle">
+					
+					<input type="radio" name="status-guerrier-bot" id="checkbox-vide-guerrier-bot">
+					<label for="status-guerrier-bot-vide">vide</label>
+					
+					<input type="radio" name="status-guerrier-bot" id="checkbox-ban-guerrier-bot">
+					<label for="status-guerrier-bot-ban">ban</label>
+					
+					<input type="radio" name="status-guerrier-bot" id="checkbox-win-guerrier-bot">
+					<label for="status-guerrier-bot-win">win</label>
+					
+					<input type="radio" name="status-guerrier-bot" id="checkbox-loose-guerrier-bot">
+					<label for="status-guerrier-bot-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-demoniste-bot">
+					<img src="classes/warlock.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-demoniste-bot" id="checkbox-vide-demoniste-bot">
+					<label for="status-demoniste-bot-vide">vide</label>
+					
+					<input type="radio" name="status-demoniste-bot" id="checkbox-ban-demoniste-bot">
+					<label for="status-demoniste-bot-ban">ban</label>
+					
+					<input type="radio" name="status-demoniste-bot" id="checkbox-win-demoniste-bot">
+					<label for="status-demoniste-bot-win">win</label>
+					
+					<input type="radio" name="status-demoniste-bot" id="checkbox-loose-demoniste-bot">
+					<label for="status-demoniste-bot-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-pretre-bot">
+					<img src="classes/priest.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-pretre-bot" id="checkbox-vide-pretre-bot">
+					<label for="status-pretre-bot-vide">vide</label>
+					
+					<input type="radio" name="status-pretre-bot" id="checkbox-ban-pretre-bot">
+					<label for="status-pretre-bot-ban">ban</label>
+					
+					<input type="radio" name="status-pretre-bot" id="checkbox-win-pretre-bot">
+					<label for="status-pretre-bot-win">win</label>
+					
+					<input type="radio" name="status-pretre-bot" id="checkbox-loose-pretre-bot">
+					<label for="status-pretre-bot-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-chasseur-bot">
+					<img src="classes/hunter.png"   class="imgPictureLittle">
+					
+					<input type="radio" name="status-chasseur-bot" id="checkbox-vide-chasseur-bot">
+					<label for="status-chasseur-bot-vide">vide</label>
+					
+					<input type="radio" name="status-chasseur-bot" id="checkbox-ban-chasseur-bot">
+					<label for="status-chasseur-bot-ban">ban</label>
+					
+					<input type="radio" name="status-chasseur-bot" id="checkbox-win-chasseur-bot">
+					<label for="status-chasseur-bot-win">win</label>
+					
+					<input type="radio" name="status-chasseur-bot" id="checkbox-loose-chasseur-bot">
+					<label for="status-chasseur-bot-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-druide-bot">
+					<img src="classes/druid.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-druide-bot" id="checkbox-vide-druide-bot">
+					<label for="status-druide-bot-vide">vide</label>
+					
+					<input type="radio" name="status-druide-bot" id="checkbox-ban-druide-bot">
+					<label for="status-druide-bot-ban">ban</label>
+					
+					<input type="radio" name="status-druide-bot" id="checkbox-win-druide-bot">
+					<label for="status-druide-bot-win">win</label>
+					
+					<input type="radio" name="status-druide-bot" id="checkbox-loose-druide-bot">
+					<label for="status-druide-bot-loose">lose</label>
+				</fieldset>	
+				<fieldset id="radio-status-paladin-bot">
+					<img src="classes/paladin.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-paladin-bot" id="checkbox-vide-paladin-bot">
+					<label for="status-paladin-bot-vide">vide</label>
+					
+					<input type="radio" name="status-paladin-bot" id="checkbox-ban-paladin-bot">
+					<label for="status-paladin-bot-ban">ban</label>
+					
+					<input type="radio" name="status-paladin-bot" id="checkbox-win-paladin-bot">
+					<label for="status-paladin-bot-win">win</label>
+					
+					<input type="radio" name="status-paladin-bot" id="checkbox-loose-paladin-bot">
+					<label for="status-paladin-bot-loose">lose</label>
+				</fieldset>
+				<fieldset id="radio-status-demonhunter-bot">
+					<img src="classes/demonhunter.png"  class="imgPictureLittle">
+					
+					<input type="radio" name="status-demonhunter-bot" id="checkbox-vide-demonhunter-bot">
+					<label for="status-demonhunter-bot-vide">vide</label>
+					
+					<input type="radio" name="status-demonhunter-bot" id="checkbox-ban-demonhunter-bot">
+					<label for="status-demonhunter-bot-ban">ban</label>
+					
+					<input type="radio" name="status-demonhunter-bot" id="checkbox-win-demonhunter-bot">
+					<label for="status-demonhunter-bot-win">win</label>
+					
+					<input type="radio" name="status-demonhunter-bot" id="checkbox-loose-demonhunter-bot">
+					<label for="status-demonhunter-bot-loose">lose</label>
+				</fieldset>
+			</TD>
+		</TR>
+		</TABLE>
+		</p>
+	</div>
+
+
+</div>
+
+
+
+</body>
+</html>
