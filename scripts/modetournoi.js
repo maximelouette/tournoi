@@ -20,6 +20,8 @@ $( function() {
 	images["paladin"].src = 'classes/paladin.png';
 	images["demonhunter"] = new Image();
 	images["demonhunter"].src = 'classes/demonhunter.png';
+	images["deathknight"] = new Image();
+	images["deathknight"].src = 'classes/deathknight.png';
 
 	images["Ban"] = new Image();
 	images["Ban"].src = 'status/ban.png';
@@ -146,6 +148,7 @@ $( function() {
 	declareClass("druide","top")
 	declareClass("paladin","top")
 	declareClass("demonhunter","top")
+	declareClass("deathknight","top")
 
 	declareClass("chaman","bot")
 	declareClass("mage","bot")
@@ -157,6 +160,7 @@ $( function() {
 	declareClass("druide","bot")
 	declareClass("paladin","bot")
 	declareClass("demonhunter","bot")
+	declareClass("deathknight","bot")
 	//---------------------------------------------------------------------------------------------------------
 	//  configuration de la scene
 	//---------------------------------------------------------------------------------------------------------
